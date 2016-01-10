@@ -1,0 +1,35 @@
+{# help.html
+   =========
+
+Template for help pages
+
+#}<!DOCTYPE html>
+<html ><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+
+    <link href="/static/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/sb-admin/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/app.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/static/query.png" />
+</head>
+<body>
+<div class="help-navbar">
+<a onclick="window.history.back()"><i class="fa fa-arrow-left"></i></a>
+<a onclick="window.history.forward()"><i class="fa fa-arrow-right"></i></a>
+<div style="float:right">
+  <a href="index"><i class="fa fa-list"></i> Index</a>
+  <a href="help"><i class="fa fa-question-circle"></i> Help</a>
+</div>
+</div>
+
+<div class="help-body col-lg-12">
+  {{contents}}
+</div>
+
+<script src="/static/sb-admin/js/jquery-1.10.2.js"></script>
+{%block atend%}
+<!-- just before /body tag -->
+{%endblock atend%}
+</body></html>

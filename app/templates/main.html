@@ -1,0 +1,103 @@
+{#
+main.html = the base template
+
+Uses Twitter Bootstrap
+
+#}<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>{% block title %}SiteBox{% endblock %}</title>
+    <link href="/static/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="/static/sb-admin/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/app.css">
+    <link rel="stylesheet" href="/static/pygments.css">
+
+    <link rel="shortcut icon" type="image/x-icon" href="/static/sitebox.ico" />
+    {% block extrahead %}{% endblock extrahead %}
+</head>
+
+<body>
+{%block body_start %}
+
+      <!-- Sidebar -->
+      <div class="navbar navbar-default navbar-top">
+        {%block topbar %}
+      <div class="container-liquid">
+        <div class="navbar-header">
+          <a href="/" class="navbar-brand"><!--i class='icon-icon_e600'></i--> 
+          <i class='fa fa-cube'></i> <b>SiteBox</b></a>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+          <ul class="nav navbar-nav">
+
+            <li>
+              <a href="/sitebox/w/about">About</a>
+            </li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right" style="padding-right:20px;">
+
+            {% if currentUserName() %}
+            <li class="dropdown user-dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <i class="fa fa-user" id="myelement"></i>
+                  {{currentUserName()}}
+                <ul class="dropdown-menu">
+                  <li><a href="#"><i class="fa fa-gear"></i>
+                    Settings</a></li>
+                  <li><a href="#"><i class="fa fa-user"></i>
+                    Profile</a></li>
+                  <li class="divider"></li>
+                  <li><a href="/logout"><i class="fa fa-power-off"></i>
+                    Log Out</a></li>
+                </ul>
+              </a>
+            </li>
+            {% else %}
+            <li class="dropdown alerts-dropdown help-popup">
+              <a href="/">
+                <i class="fa fa-sign-in"></i> Log in
+              </a>
+            </li>
+            {% endif %}
+
+            <li class="dropdown alerts-dropdown help-popup">
+              <a href="/sitebox/w/help">
+                <i class="fa fa-question-circle" id="myelement"></i> Help
+              </a>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+        {%endblock topbar %}
+{% endblock body_start %}
+
+{% block contents %}
+<div class="container-liquid" style="padding:0 20px">
+      {% block page_wrapper %}
+
+        <div class="row">
+          <div class="col-lg-12">{% block body %}
+          <p>This is the body of the page.</p>
+          {% endblock body %}</div>
+        </div><!-- row -->
+      {% endblock page_wrapper %}
+</div>
+{% endblock contents %}
+
+
+<script src="/static/sb-admin/js/jquery-1.10.2.js"></script>
+<script src="/static/sb-admin/js/bootstrap.js"></script>
+<script src="/static/app.js"></script>
+
+{%block atend%}
+<!-- just before /body tag -->
+{%endblock atend%}
+</body></html>

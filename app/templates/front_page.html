@@ -1,0 +1,63 @@
+{# front_page.html
+   ===============
+
+Front page for SiteBox
+#}
+{% extends "main.html" %}
+
+{% block page_wrapper %}
+<div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8">
+          
+<h1><i class='icon-icon_e600'></i> SiteBox!</h1>
+
+{% if currentUser.is_authenticated() %}
+
+<p>Hello, <i class="fa fa-user"></i>
+{{currentUser}}. You can:
+
+<ul>
+  <li><a href='/logout'><i class="fa fa-power-off"></i>
+      Log out</a></li>
+</ul>
+
+{% else %}
+{{badLoginWarning}}
+<p>Before you can do anything, you must log in:</p>
+
+<form id="theForm" action="/" method="POST">
+<table class="form-table">
+  <tr>
+  <th><label for="id_userName">User name:</label></th>
+  <td><input id="id_userName" name="userName" type="text"></td>
+</tr><tr>
+  <th><label for="id_password">Password:</label></th>
+  <td><input id="id_password" name="password" type="text"></td>
+</tr><tr>
+  <th></th>
+  <td><a class="btn btn-primary" onclick="submit()">
+         <i class='fa fa-user'></i>
+         Log in</a></td>
+</tr>
+</table></form>
+{% endif %}
+
+<p><br>There is also an online
+<a href="/help/main"><i class="fa fa-question-circle"></i>
+help system</a>.</p>
+
+    </div>
+    <div class="col-sm-2"></div>
+</div>
+{% endblock page_wrapper %}
+
+{% block atend %}
+<script>
+function submit(){
+    document.forms['theForm'].submit();
+}
+</script>
+{% endblock atend %}
+
+{# end #}

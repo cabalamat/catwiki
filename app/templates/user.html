@@ -1,0 +1,63 @@
+{# user.html
+   =========
+
+A user.   
+#}
+{% extends "main.html" %}
+
+{% block body %}
+<h1><i class="fa fa-user"></i> User: {{doc.userName}}</h1>
+
+<p>Details of user
+<i class="fa fa-user"></i> {{doc.userName}}.
+<span class=debug>id=<tt>{{id}}</tt></span>
+</p>
+
+<form id="theForm" action="/user/{{id}}" method="POST">
+<input name="id" type="hidden" value="{{id}}">
+<input id="delete_record" name="delete" type="hidden" value="0">
+
+<table class="form-table">
+  {{buildFormLines}}
+  <tr>
+    <td></td>
+    <td>
+       <a class="btn btn-primary" onclick="submit()">
+         <i class='fa fa-save'></i>
+         Save user</a>
+       &nbsp;
+       <a class="btn btn-danger"
+          onclick="deleteUser('{{doc.userName}}','{{id}}')">
+         <i class='fa fa-times'></i>
+         Delete user</a>
+    </td>
+  </tr>
+</table>
+</form>
+{% endblock body %}
+
+{% block atend %}
+<script>
+function submit(){
+    document.forms['theForm'].submit();
+}
+
+function deleteUser(un, id){
+    console.log("deleteUser " + un + ", " + id);
+    var msg = ("Do you really want to delete the user '"
+        + name + "'?");
+    bootbox.confirm(msg, function(result) {
+        if (result==true)
+            reallyDeleteUser(un, id);
+    });
+}
+
+function reallyDeleteUser(un, id){
+    console.log("reallyDeleteUser " + id);
+    document.getElementById("delete_record").value = "1";
+    document.forms['theForm'].submit();
+}
+</script>
+{% endblock atend %}
+
+{# end #}

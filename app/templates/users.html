@@ -1,0 +1,19 @@
+{# users.html
+   ==========
+
+A list of users
+#}
+{% extends "main.html" %}
+
+{% block body %}
+<h1><i class="fa fa-user"></i> Users ({{count}})</h1>
+
+{{table}}
+
+<br>
+<p><a class="btn btn-success" href="/user/NEW" >
+<i class="fa fa-plus"></i>
+Create new user</a></p>
+{% endblock body %}
+
+{# end #}

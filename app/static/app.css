@@ -1,0 +1,500 @@
+/* app.css */
+
+/*------------------------------------------------------------------*/
+/* fonts */
+
+/**/
+@import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,400italic,700,700italic);
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic&subset=latin,latin-ext);
+
+/*@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,700italic,400italic);
+*/
+
+tt, pre, code {
+  font-family: 'Ubuntu Mono', monospace;
+  font-size: 15px;
+}
+
+body,p,h1,h2,h3,h4,h5,h6,a {
+  //font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
+}
+
+textarea {
+  font-family: 'Ubuntu Mono', monospace;
+  border: 2px solid #ccc;
+}
+
+
+/*
+tt, pre, code {
+  font-family: monospace;
+  font-size: 15px;
+}
+
+body,p,h1,h2,h3,h4,h5,h6,a {
+  font-family: sans-serif;
+}
+
+textarea {
+  font-family: monospace;
+  border: 2px solid #ccc;
+}
+*/
+
+body, p {
+  font-size: 16px;
+}
+
+/*------------------------------------------------------------------*/
+/* modifying bootstrap */
+
+hr {
+  height: 2px;
+  background: #ccc;
+}
+
+h1,h2,h3,h4,h5,h6 { color: #036; font-weight: bold;}
+
+h1 {
+  border-bottom: 2px solid #666;
+}
+h2 {
+  border-bottom: 1px dotted;
+}
+h3 {
+  font-style: italic;
+}
+h4 {
+  font-style: normal;
+}
+
+h1 { font-size: 180%; }
+h2 { font-size: 160%; }
+h3 { font-size: 140%; }
+h4 { font-size: 125%; }
+h5 { font-size: 110%; }
+h6 { font-size: 100%; }
+
+
+/*------------------------------------------------------------------*/
+/* navbar */
+
+.navbar {
+  border-radius: 0px !important;
+  margin-bottom: 0px;
+}
+
+/*------------------------------------*/
+/* fix help on navbar top right */
+
+.dropdown a {
+  //padding-left: 10px !important;
+  //padding-right: 10px !important;
+}
+
+.help-popup a {
+  padding-right: 1px !important;
+}
+.help-main a {
+  padding-left: 4px !important;
+}
+
+/*------------------------------------------------------------------*/
+/* tables */
+
+table.report_table {
+  border: 1px #aaa solid;
+  border-collapse: collapse;
+  margin: 7px 0 7px 0;
+  background: #fff;
+}
+
+table.report_table th {
+  border: 1px solid #aaa;
+  padding: 4px 6px 2px 6px;
+}
+
+
+table.report_table tbody tr:nth-child(odd) {
+  //background: #eeeeee;
+}
+
+table.report_table td {
+  border: 1px solid #aaa;
+  padding: 3px 6px 1px 6px;
+  vertical-align: top;
+}
+
+/* tablesorter */
+
+table.tablesorter th.header {
+  cursor: pointer;
+  //background: #fff;
+}
+
+table.tablesorter th.header:after {
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  content: "\f0dc";
+  padding-left: 5px;
+}
+
+th.headerSortDown, th.headerSortUp,
+th.headerSortDown:hover, th.headerSortUp:hover
+{
+  color: #000 !important;
+  background: #bcf !important;
+}
+
+table.tablesorter th.headerSortDown:after {
+  /* up arrow */
+  content: "\f0de";
+}
+
+table.tablesorter th.headerSortUp:after {
+  /* down arrow */
+  content: "\f0dd";
+}
+
+
+/*------------------------------------------------------------------*/
+/* forms */
+
+
+.form-table tr {
+    //background: #0f0;
+    //padding: 40px !important;
+    //border: 2px solid #900;
+}
+
+.form-table th {
+    vertical-align: top;
+    padding: 6px 10px 6px 0px;
+}
+
+.form-table td {
+    padding: 3px 10px 3px 0px;
+}
+
+.form-table input {
+   padding: 1px 5px;
+}
+
+.form-table .btn {
+   padding: 4px 8px;
+}
+
+/* make sure there is enough space before buttons */
+
+td > .btn {
+  margin-top: 12px;
+}
+
+.form-error {
+  /* an error message in a form */
+  color: #800;
+  background: #fee;
+  padding: 3px 6px 3px 6px;
+  border: 1px solid #c66;
+}
+
+input.gin, textarea.gin {
+  /* green input box -- similar to alphabet */
+  padding: 1px 2px 1px 2px;
+  border: 2px solid #060;
+  border-radius: 4px;
+}
+
+
+.form-table label  {
+  float: right;
+}
+
+/*------------------------------------------------------------------*/
+/* wiki pages */
+
+.wiki-navigation {
+  padding: 5px 10px 0px 30px;
+  //padding-bottom: 3px;
+  border-bottom: 2px solid #ccc;
+}
+
+
+
+.wiki-commands {
+  //background: #fff4f4;
+}
+.command-header {
+  margin-top: 5px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.loc-sitename, .loc-sitename a{
+  /* the site name on the location bar */
+  color: #060;
+  font-weight: bold;
+  //background: #eeffee;
+  //padding: 1px 4px;
+  //border: 1px solid #9c9;
+  //border-radius: 4px;
+}
+
+.loc-sitename a:hover {
+  text-decoration: none;
+  color: #faf;
+  background: #606;
+}
+
+.loc-wiki-path { /* the wiki path on the location bar */
+  color: #036;
+  font-weight: bold;
+  //background: #eeeeff;
+  //padding: 1px 4px;
+  //border: 1px solid #9ac;
+  //border-radius: 4px;
+}
+.loc-sitename a, .loc-wiki-path a {
+  padding:1px 2px;
+}
+.loc-wiki-path a:hover {
+  text-decoration: none;
+  //color: #606;
+  //background: #f8f;
+  color: #faf;
+  background: #606;
+}
+
+
+/*------------------------------------------------------------------*/
+/* inside a wiki page (.wiki-contents ) */
+
+/* table of contents */
+.toc {
+  min-width: 200px;
+  display: table;
+  border: 1px solid #666;
+  background: #f4f4f4;
+  margin: 3px 20px 6px 0px;
+  padding: 4px 12px 0px 8px;
+}
+.toc:before {
+  content: "Table of contents";
+  font-weight: bold;
+}
+.toc li:before { content: ""; }
+.toc ul
+
+
+.wiki-contents, .wiki-index {
+  //background: #f4f4ff;
+  //margin-left: 20px;
+  //margin: 0 20px 20px 20px;
+  padding-bottom: 20px;
+}
+
+.wiki-contents a, .wiki-index a { color: #009; }
+.wiki-contents a:hover, .wiki-index a:hover {
+  background: #e4e4ff;
+  //text-decoration: none;
+  text-shadow: 1px 1px 1px #88a;
+}
+
+.wiki-contents h1, .wiki-index h1 {
+  text-shadow: 2px 2px 2px #bbb;
+  padding-top: 0px;
+  margin-top: 5px;
+}
+
+body, .wiki-contents {
+  counter-reset: h2;
+}
+
+.wiki-contents h2 {counter-reset: h3}
+.wiki-contents h3 {counter-reset: h4}
+.wiki-contents h4 {counter-reset: h5}
+
+.wiki-contents h2:before {
+  counter-increment: h2;
+  content: counter(h2) ". "
+}
+.wiki-contents h3:before {
+  counter-increment: h3;
+  content: counter(h2) "." counter(h3) ". ";
+}
+.wiki-contents h4:before {
+  counter-increment: h4;
+  content: counter(h2) "." counter(h3) "." counter(h4) ". ";
+}
+.wiki-contents h5:before {
+  counter-increment: h5;
+  content: counter(h2) "." counter(h3) "."
+           counter(h4) "." counter(h5) ". ";
+}
+
+h2.nocount:before, h3.nocount:before, h4.nocount:before,
+h5.nocount:before, h6.nocount:before
+{
+  content: "";
+  counter-increment: none;
+}
+
+
+pre {
+  line-height: 16px;
+  padding: 2px 6px 3px 5px;
+  margin-left: 25px;
+  margin-right: 25px;
+  border: 2px solid #aaa;
+  white-space: pre-wrap;
+  word-break: keep-all;
+  color: #222;
+  background: #ddd;
+}
+
+code {
+  padding: 1px;
+  color: #510;
+  background: #f8f4e0;
+}
+
+pre code {
+  color: #000;
+}
+
+.codehilite pre {
+  /* having a non-white background doesn't look so good with codehilite */
+  background: #fff;
+  color: #000;
+}
+
+blockquote {
+    padding: 2px 8px;
+    //border-top: 1px solid #aaa;
+    //border-bottom: 1px solid #aaa;
+    //border-right: 1px solid #aaa;
+    border-left: 3px solid #aaa;
+    margin: 6px 20px;
+}
+
+textarea#source {
+   width: 98%;
+}
+
+.wiki-contents th {
+  border: 1px solid #666;
+  padding: 3px 6px 3px 6px;
+  background: #f4f4f4;
+}
+
+.wiki-contents td {
+  border: 1px solid #666;
+  padding: 2px 6px 2px 6px;
+  vertical-align: top;
+}
+
+.wiki-contents table {
+  border: 2px #666 solid;
+  border-collapse: collapse;
+  margin: 9px 0 9px 0;
+  background: #fff;
+}
+
+/* external links display font awesome fa-external-link glyph */
+a[href*="//"]:after {
+  font-size: 80%;
+  font-family: 'FontAwesome';
+  content: " \f08e";
+}
+
+.wiki-contents img {
+  padding: 2px;
+  border: 1px dashed #666;
+  max-width: 90%;
+}
+
+/*------------------------------------------------------------------*/
+/* debugging */
+
+.debug {
+  background: #feb;
+  color: #630;
+  padding: 2px 4px;
+  border: 1px solid #a96;
+  border-radius: 5px;
+}
+
+.debug {
+  /* make debugging stuff not appear on page */
+  //visibility: collapse;
+  //display: none;
+}
+
+/*------------------------------------------------------------------*/
+/* printing */
+
+
+@media print {
+  p,a,i,b,body {
+    font-size: 10pt;
+    line-height: 14pt;
+  }
+  tt, code, pre {
+    font-size: 10pt;
+  }
+
+  .wiki-navigation a:after, .loc-wiki-path a:after,
+  a:after, a:link:after {
+    content:"";/* don't print URL */
+  }
+
+  .wiki-commands {
+    visibility: collapse;
+    display:  none;
+  }
+
+
+}
+
+/*------------------------------------------------------------------*/
+/* cat icon */
+
+@font-face {
+    font-family: 'icomoon';
+    src:url('fonts/icomoon.eot?qnlk2l');
+    src:url('fonts/icomoon.eot?#iefixqnlk2l') format('embedded-opentype'),
+        url('fonts/icomoon.woff?qnlk2l') format('woff'),
+        url('fonts/icomoon.ttf?qnlk2l') format('truetype'),
+        url('fonts/icomoon.svg?qnlk2l#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"]  {
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    //-webkit-font-smoothing: antialiased;
+    //-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-icon_e600:before {
+    content: "\e600";
+}
+.icon-icon_e601:before {
+    content: "\e601";
+}
+
+/*------------------------------------------------------------------*/
+
+/*end*/

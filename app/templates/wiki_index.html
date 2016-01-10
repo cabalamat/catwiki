@@ -1,0 +1,19 @@
+{# wiki_index.html
+   ===============
+
+An index of the files in a fiolder in a wiki
+#}
+{% extends "generic_10_2.html" %}
+
+{% block wikiCommands %}
+<p class="command-header">Commands</p>
+{% endblock wikiCommands %}
+
+{% block wikiContents %}
+<div class="wiki-index">
+  {{wikiText}}
+</div>
+<br><br>
+{% endblock wikiContents %}
+
+{# end #}

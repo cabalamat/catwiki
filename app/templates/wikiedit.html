@@ -1,0 +1,53 @@
+{# wikiedit.html
+   =============
+
+Editting a page in a wiki
+#}
+{% extends "wiki_page.html" %}
+
+
+{% block wikiCommands %}
+<p class="command-header">Commands</p>
+
+<p><a class='btn btn-success' onclick="submit()">
+<i class='fa fa-save'></i> Save changes</a></p>
+
+<p><a class='btn btn-default' href="/{{siteName}}/w/{{pathName}}">
+<i class='fa fa-undo'></i>
+Cancel changes</a></p>
+
+<p><a class='btn btn-primary'>
+<i class='fa fa-files-o'></i>
+Rename article</a></p>
+
+<hr>
+<p><a class='btn btn-danger' onclick="deleteArticle()">
+<i class='fa fa-times'></i> Delete article</a></p>
+{% endblock wikiCommands %}
+
+
+{% block wikiContents %}
+<br>
+<form id="theForm" method="POST"
+      action="/{{siteName}}/wikiedit/{{pathName}}">
+  <input id="delete_record" name="delete" type="hidden" value="0">
+  <textarea name=source id=source rows=25 cols=70>{{source}}</textarea>
+</form>
+{% endblock wikiContents %}
+
+
+{% block atend %}
+<script>
+function submit(){
+    console.log("submit");
+    document.forms['theForm'].submit();
+}
+
+function deleteArticle(){
+    console.log("deleteArticle");
+    document.getElementById("delete_record").value = "1";
+    document.forms['theForm'].submit();
+}
+</script>
+{% endblock atend %}
+{# end #}

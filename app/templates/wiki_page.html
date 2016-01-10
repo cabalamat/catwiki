@@ -1,0 +1,22 @@
+{# wiki_page.html
+   ==============
+
+A page in a wiki
+#}
+{% extends "generic_10_2.html" %}
+
+{% block wikiCommands %}
+<p class="command-header">Commands</p>
+<p><a class='btn btn-success'
+href="/{{siteName}}/wikiedit/{{pathName}}">
+<i class='fa fa-edit'></i> Edit this page</a></p>
+{% endblock wikiCommands %}
+
+{% block wikiContents %}
+<div class="wiki-contents">
+  {{wikiText}}
+</div>
+<br><br>
+{% endblock wikiContents %}
+
+{# end #}

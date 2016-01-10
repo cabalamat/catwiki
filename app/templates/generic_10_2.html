@@ -1,0 +1,41 @@
+{# generic_10_2.html
+   =================
+
+Generic page layout with:
+
+- a navigation bar at the top
+- a 2-column area with buttons for commands
+- a 10-column main area
+#}
+{% extends "main.html" %}
+
+{% block title %}
+{{title}}
+{% endblock %}
+
+{% block contents %}
+<div class="container-liquid" style="padding: 0px 20px;">
+  <div class="row">
+    <div class="col-lg-12 wiki-navigation">
+      {% block wikiNavigation %}
+      <p>{{nav2}}</p>
+      {% endblock wikiNavigation %}
+    </div>
+  </div><!-- row -->
+  <div class="row">
+    <div class="col-sm-2 wiki-commands">
+      {% block wikiCommands %}
+      {% endblock wikiCommands %}
+    </div>
+    <div class="col-md-10">
+      {% block wikiContents %}
+        <div class="wiki-contents">
+          {{wikiText}}
+        </div>
+      {% endblock wikiContents %}
+    </div>
+  </div><!-- row -->
+</div>
+{% endblock contents %}
+
+{#end#}

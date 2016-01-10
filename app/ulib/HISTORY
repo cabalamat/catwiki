@@ -1,0 +1,15 @@
+HISTORY for ulib
+================
+
+4-Mar-2014:
+changed <debugdec.py> so debugging is switched on by default. When
+running in production mode, do this:
+
+    import debugdec
+    debugdec.debugging = False
+
+Chinging debugdec so messages are written to stderr instead of stdout.    
+
+
+
+/end/
