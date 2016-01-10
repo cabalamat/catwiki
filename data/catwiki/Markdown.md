@@ -1,0 +1,16 @@
+# Markdown
+
+Markdown is the lightweight markup language that [[Sitebox]] uses.
+
+Markdown was chosen because:
+
+* the syntax is quite good
+* it is widely used
+* the Python Markdown package is extendible
+* I'm familiar with it, having used it before.
+
+## See also
+
+* [Markdown syntax](Markdown/syntax)
+* [Wikipedia page on Markdown](https://en.wikipedia.org/wiki/Markdown)
+* [Python-Markdown on Pythonhosted](https://pythonhosted.org/Markdown/index.html) (also: [PyPI](https://pypi.python.org/pypi/Markdown), [GitHub](https://github.com/waylan/Python-Markdown))

@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# startup = run programs at start-up
+# (put this in a directory in your PATH)
+
+cd ~/sproj/sitebox
+nohup ./runme
+
+
+#end

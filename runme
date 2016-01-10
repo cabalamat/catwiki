@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# runme = run sitebox
+
+echo "*** run sitebox ***"
+echo " you are in " `pwd`
+. venv/bin/activate
+python main.py
+
+
+#end
