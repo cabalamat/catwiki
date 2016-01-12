@@ -1,0 +1,11 @@
+# .gitignore for Python projects
+
+#### ignore compiled Python modules
+*.pyc
+*.pyo
+
+#### ignore backup files made by text editor
+*~
+
+
+#end

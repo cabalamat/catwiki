@@ -1,0 +1,16 @@
+cffi==1.4.2
+cryptography==1.2.1
+enum34==1.1.2
+Flask==0.10.1
+idna==2.0
+ipaddress==1.0.16
+itsdangerous==0.24
+Jinja2==2.8
+Markdown==2.6.5
+MarkupSafe==0.23
+ndg-httpsclient==0.4.0
+pyasn1==0.1.9
+pycparser==2.14
+pyOpenSSL==0.15.1
+six==1.10.0
+Werkzeug==0.11.3

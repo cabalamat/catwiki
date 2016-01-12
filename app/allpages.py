@@ -25,33 +25,7 @@ jinjaEnv.loader = jinja2.FileSystemLoader(templateDir)
 
 
 #---------------------------------------------------------------------
-# MongoDB/pymongo/mongoab config
-
-import mongoab
-mongoab.setDatabase('sitebox')
-
-#---------------------------------------------------------------------
 # login manager
-
-from flask.ext.login import LoginManager, current_user
-
-loginManager = LoginManager()
-loginManager.init_app(app)
-
-jinjaEnv.globals['currentUser'] = current_user
-def currentUserName():
-    print ("{}!!!!! current_user={} {}"
-        .format(
-            termcolours.TermColours.RED,
-            current_user,
-            termcolours.TermColours.NORMAL))
-    if current_user.is_anonymous():
-        return ""
-    try:
-        return str(current_user.userName)
-    except:
-        return ""
-jinjaEnv.globals['currentUserName'] = currentUserName
 
 def helpPage():
     p = request.path[1:]

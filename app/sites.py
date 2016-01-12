@@ -15,6 +15,10 @@ from allpages import *
 
 #---------------------------------------------------------------------
 
+@app.route("/")
+def front_page():
+    return allSites()
+
 @app.route("/_allSites")
 def allSites():
     """ List all the sites for this SiteBox installation
