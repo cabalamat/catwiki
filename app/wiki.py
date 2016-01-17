@@ -159,7 +159,7 @@ def locationSitePath(siteName, pathName):
         siteName=siteName)
     h += ("\n<span class='loc-wiki-path'><a href='/%s/w/'>%s</a>"
          % (siteName, useForDir))
-    prvars("pathName sp")
+    #prvars("pathName sp")
     for ix, part in enumerate(sp):
         item = ("<a href='/%s/w/%s'>%s</a>"
             %(siteName, pathJoin(sp,ix), part))

@@ -1,11 +1,11 @@
 #!/bin/sh
 
-# runme = run sitebox
+# runme = run catwiki
 
-echo "*** run sitebox ***"
+echo "*** run catwiki ***"
 echo " you are in " `pwd`
 . venv/bin/activate
-python main.py
+cd app; python main.py
 
 
 #end

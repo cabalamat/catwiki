@@ -4,10 +4,12 @@ import os.path
 import collections
 import cgi
 
+import config
+
 from flask import Flask, request
 app = Flask(__name__)
-app.config["SECRET_KEY"] = "don't tell anyone 456436"
-app.config["SESSION_COOKIE_NAME"] = "session_7330"
+#app.config["SECRET_KEY"] = "don't tell anyone" # not using
+app.config["SESSION_COOKIE_NAME"] = "session_%d" % (config.PORT,)
 
 from ulib import debugdec, butil, termcolours
 from ulib.debugdec import printargs, prvars
