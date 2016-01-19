@@ -352,8 +352,8 @@ pre {
   border: 2px solid #aaa;
   white-space: pre-wrap;
   word-break: keep-all;
-  color: #222;
-  background: #ddd;
+  background: #fff;
+  color: #000;
 }
 
 code {
@@ -362,9 +362,6 @@ code {
   background: #f8f4e0;
 }
 
-pre code {
-  color: #000;
-}
 
 .codehilite pre {
   /* having a non-white background doesn't look so good with codehilite */
