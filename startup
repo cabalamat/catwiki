@@ -3,7 +3,7 @@
 # startup = run programs at start-up
 # (put this in a directory in your PATH)
 
-cd ~/sproj/sitebox
+cd ~/sproj/catwiki
 nohup ./runme
 
 

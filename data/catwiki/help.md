@@ -1,7 +1,7 @@
 # Help
 
-This is the main help page for [[SiteBox]].
+This is the main help page for [[CatWiki]].
 
-* [About SiteBox](about)
+* [About CatWiki](about)
 * [Frequently Asked Questions](faq)
 * [Markdown](Markdown)
