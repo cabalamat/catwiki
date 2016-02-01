@@ -13,8 +13,9 @@
 
 tt, pre, code {
   font-family: 'Ubuntu Mono', monospace;
-  font-size: 15px;
+  //font-size: 15px;
 }
+pre { font-size: 15px; }
 
 body,p,h1,h2,h3,h4,h5,h6,a {
   //font-family: 'Open Sans', sans-serif;
@@ -25,23 +26,6 @@ textarea {
   font-family: 'Ubuntu Mono', monospace;
   border: 2px solid #ccc;
 }
-
-
-/*
-tt, pre, code {
-  font-family: monospace;
-  font-size: 15px;
-}
-
-body,p,h1,h2,h3,h4,h5,h6,a {
-  font-family: sans-serif;
-}
-
-textarea {
-  font-family: monospace;
-  border: 2px solid #ccc;
-}
-*/
 
 body, p {
   font-size: 16px;
