@@ -24,3 +24,7 @@ Similar projects to SiteBox include:
 * [Enterprise wiki](http://enterprisewiki.co) allows anyone to quickly create a wiki. [Discussion on HN](https://news.ycombinator.com/item?id=10457441), Oct 2015.
 * [Simple Site](http://www.simplesite.com/) allows you to create a website that they will then host.
 * [Wix](http://www.wix.com/) allows you to create a website that they will then host.
+
+## See also
+
+* [[Similar ideas to MeowCat]]
