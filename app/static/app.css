@@ -391,6 +391,13 @@ a[href*="//"]:after {
   font-family: 'FontAwesome';
   content: " \f08e";
 }
+/*
+a[href*="//"]:before {
+  font-family: 'FontAwesome';
+  padding-right: 0.2em;
+  content: "\f14c";
+}
+*/
 
 .wiki-contents img {
   padding: 2px;
