@@ -13,7 +13,7 @@
 
 tt, pre, code {
   font-family: 'Ubuntu Mono', monospace;
-  //font-size: 15px;
+  font-size: 15px;
 }
 pre { font-size: 15px; }
 
@@ -341,9 +341,11 @@ pre {
 }
 
 code {
-  padding: 1px;
-  color: #510;
-  background: #f8f4e0;
+  color: #006;
+  background: #eef4ff;
+  padding: 0 0 1px 0;
+  border: 1px solid #acf;
+  border-radius: 0px;
 }
 
 
