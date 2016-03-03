@@ -12,6 +12,8 @@ The ideas around [SiteBox](Sitebox) stemmed from what were originally three sepa
 
 * **Concept 3** (no name): A platform for writing books and technical documentation, ideally collaboratively. Think of a web-based front-end to [Pandoc](http://johnmacfarlane.net/pandoc/) coupled with an intuitive user interface to [Git](http://git-scm.com/) and [Github](https://github.com/)-like functionality. [GitBook](https://www.gitbook.io/) is a project along these lines. *"Github for writers"* might be a good slogan for this part of the project.
 
+ - - - -
+
 ## Putting them together
 
 The more I thought about these ideas, the more I realised there was considerable overlap between them. 
