@@ -5,6 +5,7 @@ import os.path, re, math, inspect, datetime, sys
 from flask import request, redirect, Response
 
 import markdown
+from markdown.extensions.toc import TocExtension
 
 from ulib import butil
 from ulib.butil import form
@@ -19,8 +20,9 @@ from allpages import *
 # debugging
 
 def prt(formatStr="", *args):
-    """ print a message, prepended with timestamp, function, line
-    number. Uses old-style '%' format strings.
+    """ For debugging -- print a message, prepended with timestamp, function,
+    line number.
+    Uses old-style '%' format strings.
     @param formatStr::str
     @param args::[]
     """
@@ -185,8 +187,9 @@ def deleteArticle(siteName, pathName):
 
 #---------------------------------------------------------------------
 
-markdownProcessor = markdown.Markdown(['extra', 'toc',
+markdownProcessor = markdown.Markdown(['extra',
     'sane_lists',
+    'toc',
     'codehilite(guess_lang=False)',
     #'wikilinks(base_url=,end_url=)',
     ])

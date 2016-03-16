@@ -2,6 +2,10 @@
 
 *This page describes the version of markdown syntax used by Sitebox. See also [[extensions]].*
 
+Below is a table of contents. It can be produced using the markup `[TOC]`.
+
+[TOC]
+
 ## Images
 
 Inline-style: 
@@ -41,19 +45,6 @@ And here's another:
 | ------------- | ------------------------------ |
 | `help()`      | Display the help window.       |
 | `destroy()`   | **Destroy your computer!**     |
-
-### Levels of header 
-
-Text.
-
-#### This is h4
-
-More text.
-
-##### This is h5
-
-Even more text.
-###### This is h6, but it is seldom used.
 
 ## Markup within a paragraph
 
