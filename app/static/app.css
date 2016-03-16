@@ -368,24 +368,25 @@ textarea#source {
    width: 98%;
 }
 
-.wiki-contents th {
-  border: 1px solid #666;
-  padding: 3px 6px 3px 6px;
-  background: #f4f4f4;
-}
-
-.wiki-contents td {
-  border: 1px solid #666;
-  padding: 2px 6px 2px 6px;
-  vertical-align: top;
-}
 
 .wiki-contents table {
-  border: 2px #666 solid;
+  border: 1px solid #aaa;
   border-collapse: collapse;
   margin: 9px 0 9px 0;
   background: #fff;
 }
+.wiki-contents th {
+  border: 1px solid #aaa;
+  padding: 3px 6px 3px 6px;
+  background: #f4f4f4;
+  background: #d8e8ff;
+}
+.wiki-contents td {
+  border: 1px solid #aaa;
+  padding: 2px 6px 2px 6px;
+  vertical-align: top;
+}
+
 
 /* external links display font awesome fa-external-link glyph */
 a[href*="//"]:after {
