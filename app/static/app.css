@@ -13,9 +13,8 @@
 
 tt, pre, code {
   font-family: 'Ubuntu Mono', monospace;
-  font-size: 15px;
+  font-size: 16px;
 }
-pre { font-size: 15px; }
 
 body,p,h1,h2,h3,h4,h5,h6,a {
   //font-family: 'Open Sans', sans-serif;
@@ -342,7 +341,7 @@ pre {
 
 code {
   color: #006;
-  background: #eef4ff;
+  background: #fff;
   padding: 0 0 1px 0;
   border: 1px solid #acf;
   border-radius: 0px;
@@ -378,7 +377,6 @@ textarea#source {
 .wiki-contents th {
   border: 1px solid #aaa;
   padding: 3px 6px 3px 6px;
-  background: #f4f4f4;
   background: #d8e8ff;
 }
 .wiki-contents td {
