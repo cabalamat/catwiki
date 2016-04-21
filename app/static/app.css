@@ -342,9 +342,9 @@ pre {
 code {
   color: #006;
   background: #fff;
-  padding: 0 0 1px 0;
-  border: 1px solid #acf;
-  border-radius: 0px;
+  padding: 0 1px 0 1px;
+  border: 1px solid #b4d7ff;
+  border-radius: 4px;
 }
 
 
