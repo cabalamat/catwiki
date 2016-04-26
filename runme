@@ -5,7 +5,7 @@
 echo "*** run catwiki ***"
 echo " you are in " `pwd`
 . venv/bin/activate
-cd app; python main.py
+cd app; python server.py
 
 
 #end
