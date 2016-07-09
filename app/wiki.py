@@ -315,12 +315,16 @@ def getIndex(siteName, pathName):
     nonArticleItems = []
     if arts:
         for fn in arts:
+            text = getTitle(butil.join(dirPan, fn+".md"))
+            if text==fn: 
+                text = ""
+            else:
+                text = " - " + text
             items.append("<a href='{fn}'>"
                 "<i class='fa fa-file-text-o'></i> "
-                "{fn}</a> - {text}".format(
+                "{fn}</a>{text}".format(
                 fn = fn,
-                text = getTitle(butil.join(dirPan, fn+".md"))
-            ))
+                text = text))
         #//for
         h += bsColumns(items, 3)
     if nonArticles:
