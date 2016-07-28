@@ -337,7 +337,8 @@ pre {
   padding: 2px 6px 3px 5px;
   margin-left: 25px;
   margin-right: 25px;
-  border: 2px solid #aaa;
+  //border: 2px solid #aaa;
+  border: 2px solid #b4d7ff;
   white-space: pre-wrap;
   word-break: keep-all;
   background: #fff;
