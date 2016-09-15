@@ -1,20 +1,60 @@
 /* app.css */
 
 /*------------------------------------------------------------------*/
-/* fonts */
+/* local fonts */
 
-@import url(http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+@font-face {
+  font-family: 'Ubuntu Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url(fonts/UbuntuMono-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Ubuntu Mono';
+  font-style: normal;
+  font-weight: 700;
+  src: url(fonts/UbuntuMono-Bold.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Ubuntu Mono';
+  font-style: italic;
+  font-weight: 400;
+  src: url(fonts/UbuntuMono-Italic.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Ubuntu Mono';
+  font-style: italic;
+  font-weight: 700;
+  src: url(fonts/UbuntuMono-BoldItalic.ttf) format('truetype');
+}
 
-@import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic);
 
-/**/
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url(fonts/Roboto-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: url(fonts/Roboto-Bold.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 400;
+  src: url(fonts/Roboto-Italic.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 700;
+  src: url(fonts/Roboto-BoldItalic.ttf) format('truetype');
+}
 
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic&subset=latin,latin-ext);
-
-@import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,400italic,700,700italic);
-
-/*@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,700italic,400italic);
-*/
+/*------------------------------------------------------------------*/
 
 tt, pre, code {
   font-family: 'Ubuntu Mono', monospace;
