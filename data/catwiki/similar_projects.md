@@ -5,6 +5,7 @@ Similar projects to SiteBox include:
 ## Encryption
 
 * [Tutanota](https://tutanota.com/) is an encrypted email program which works with Android and iOS.
+* [Mailpile](https://www.mailpile.is/) is an encrypted email program that has a web interface a  bit like gmail.
 * [Charme aka Noisecrypt](https://github.com/mschultheiss/Noisecrypt) bills itself as "A decentralized social network with end-to-end encryption for messaging, private posts and private profile data."
 * [Zeronet](https://github.com/HelloZeroNet/ZeroNet) is a way of having anonymous, decentralised websites accessible over a P2P network
 
