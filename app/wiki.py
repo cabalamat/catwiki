@@ -320,18 +320,26 @@ def getIndex(siteName, pathName):
                 text = ""
             else:
                 text = " - " + text
-            items.append("<a href='{fn}'>"
-                "<i class='fa fa-file-text-o'></i> "
-                "{fn}</a>{text}".format(
-                fn = fn,
-                text = text))
+                
+            if fn=="home": 
+                item = form("<a href='{fn}'>"
+                    "<span class='home-icon'><i class='fa fa-home'></i></span> {fn}</a>{text}",
+                    fn = fn,
+                    text = text)
+            else:    
+                item = form("<a href='{fn}'>"
+                    "<i class='fa fa-file-text-o'></i> {fn}</a>{text}",
+                    fn = fn,
+                    text = text)
+                
+            items.append(item)
         #//for
         h += bsColumns(items, 3)
     if nonArticles:
         for fn in nonArticles:
-            nonArticleItems.append("<a href='{fn}'>"
+            nonArticleItems.append(form("<a href='{fn}'>"
                 "<i class='fa fa-file-o'></i> "
-                "{fn}</a>".format(
+                "{fn}</a>",
                 fn = fn))
         #//for
         h += "<h3>Other files</h3>\n" + bsColumns(nonArticleItems, 3)
