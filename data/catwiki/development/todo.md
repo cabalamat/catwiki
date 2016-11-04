@@ -61,3 +61,5 @@ Make the table of contents look nicer: (i) only include sections from `##` downw
 
 Markdown doesn't have a syntax to indent a paragraph. Add one. Note that indentation is a separate concept from blockquoting.
 
+Do something about differently-capitalised versions of the same article e.g. `[[Python.]]` versus `[[python.]]`.
+
