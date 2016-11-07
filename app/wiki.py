@@ -323,7 +323,8 @@ def getIndex(siteName, pathName):
                 
             if fn=="home": 
                 item = form("<a href='{fn}'>"
-                    "<span class='home-icon'><i class='fa fa-home'></i></span> {fn}</a>{text}",
+                    "<span class='home-icon'><i class='fa fa-home'></i></span>"
+                    " {fn}</a>{text}",
                     fn = fn,
                     text = text)
             else:    

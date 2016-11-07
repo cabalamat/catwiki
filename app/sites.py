@@ -7,6 +7,7 @@ from flask import request, redirect
 import markdown
 
 from ulib import butil
+from ulib.butil import form
 from ulib.debugdec import prvars
 
 import config
@@ -59,11 +60,39 @@ def siteInfo(siteName):
     """ Display information about a site.
     """
     import wiki
-    
     tem = jinjaEnv.get_template("generic_10_2.html")
+    
+    dirPan = wiki.getDirPan(siteName, "")
+    fns, dirs = butil.getFilesDirs(dirPan)
+    if butil.fileExists(butil.join(dirPan, "home.md")):
+         homePageInfo = form("View <a href='/{siteName}/w/home'>"
+             "<i class='fa fa-home'></i> home page</a>.",
+             siteName = siteName)           
+    else:                                
+         homePageInfo = form("""There is no home page.
+             <a href='/{siteName}/wikiedit/home'>
+                <i class='fa fa-plus'></i>
+                Create one</a>.""",
+             siteName = siteName)  
+         
     contents = """\
 <h1>Information about site <i class='fa fa-bank'></i> {siteName}</h1>
-""".format(siteName = siteName)
+
+<p><b>{siteName}</b> is stored in directory <code>{siteRoot}</code> .</p>
+
+<p>There are {numPages} pages in the root folder, and {numSubDirs} sub-folders.
+<a href='/{siteName}/w/'><i class='fa fa-folder'></i>
+View root folder</a>.
+</p>
+
+<p>{homePageInfo}</p>
+""".format(
+        siteName = siteName,
+        siteRoot = dirPan,
+        numPages = len(fns),
+        numSubDirs = len(dirs),
+        homePageInfo = homePageInfo,
+    )
     h = tem.render(
     
         siteName = siteName,
