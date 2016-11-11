@@ -461,12 +461,21 @@ a[href*="//"]:before {
 /* This is a bodge so that inside a table of contents, it makes the
 first item, which will be the <h1> title of the page, invisible */
 
+div.toc > ul {
+    padding-left: 20px;
+}
+
 div.toc > ul > li > a {
    display: none;
 }
 
 div.toc > ul > li {
    list-style-type: none;
+}
+
+div.toc > ul > li > ul {
+    margin-left: 0px;
+    padding-left: 0px;
 }
 
 /*------------------------------------------------------------------*/
