@@ -301,7 +301,7 @@ input.gin, textarea.gin {
 /* index pages */
 
 .home-icon {
-} 
+}
 
 /*------------------------------------------------------------------*/
 /* inside a wiki page (.wiki-contents ) */
@@ -455,6 +455,18 @@ a[href*="//"]:before {
   padding: 2px;
   border: 1px dashed #666;
   max-width: 90%;
+}
+
+/*------------------------------------------------------------------*/
+/* This is a bodge so that inside a table of contents, it makes the
+first item, which will be the <h1> title of the page, invisible */
+
+div.toc > ul > li > a {
+   display: none;
+}
+
+div.toc > ul > li {
+   list-style-type: none;
 }
 
 /*------------------------------------------------------------------*/
