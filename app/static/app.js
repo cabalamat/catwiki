@@ -13,5 +13,34 @@ function openHelp(helpPage){
 }
 
 //--------------------------------------------------------------------
+/* editting on wikiedit page */
+
+
+function boldPressed(){
+    console.log("boldPressed");
+    
+    var selectedText = getSelection();
+    console.log("Selected: " + selectedText);
+    
+    var newText = "**" + selectedText + "**";
+}
+
+function getSelection() {
+    
+    // obtain the object reference for the <textarea>
+    var txtarea = document.getElementById("source");
+    
+    // obtain the index of the first selected character
+    var start = txtarea.selectionStart;
+    
+    // obtain the index of the last selected character
+    var finish = txtarea.selectionEnd;
+    
+    // obtain the selected text
+    var sel = txtarea.value.substring(start, finish);
+    
+    return sel;
+}
+//--------------------------------------------------------------------
 
 //end

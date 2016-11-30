@@ -28,6 +28,25 @@ Rename article</a></p>
 
 {% block wikiContents %}
 <br>
+<div id='edit_toolbar'>
+  <span onclick='boldPressed()'>
+    <i class='fa fa-bold'></i></span>
+  &nbsp;
+    <i class='fa fa-italic'></i>
+  &nbsp;  
+    <i class='fa fa-underline'></i>
+  &nbsp;  
+    <i class='fa fa-strikethrough'></i>
+  &nbsp;  
+    <i class='fa fa-superscript'></i>
+  &nbsp;  
+    <i class='fa fa-subscript'></i>
+  &nbsp;  
+    <i class='fa fa-link'></i>
+  &nbsp;  
+    <i class='fa fa-quote-left'></i>
+</div>
+
 <form id="theForm" method="POST"
       action="/{{siteName}}/wikiedit/{{pathName}}">
   <input id="delete_record" name="delete" type="hidden" value="0">
@@ -48,6 +67,7 @@ function deleteArticle(){
     document.getElementById("delete_record").value = "1";
     document.forms['theForm'].submit();
 }
+
 </script>
 {% endblock atend %}
 {# end #}

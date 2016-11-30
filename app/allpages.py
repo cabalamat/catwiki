@@ -10,6 +10,7 @@ from flask import Flask, request
 app = Flask(__name__)
 #app.config["SECRET_KEY"] = "don't tell anyone" # not using
 app.config["SESSION_COOKIE_NAME"] = "session_%d" % (config.PORT,)
+app.config["WERKZEUG_DEBUG_PIN"] = "off"
 
 from ulib import debugdec, butil, termcolours
 from ulib.debugdec import printargs, prvars
