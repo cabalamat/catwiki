@@ -27,25 +27,32 @@ Rename article</a></p>
 
 
 {% block wikiContents %}
-<br>
 <div id='edit_toolbar'>
+  &nbsp;
   <span onclick='addAround("**", "**")'>
     <i class='fa fa-bold'></i></span>
-  &nbsp;
+  &nbsp; 
   <span onclick='addAround("*", "*")'>
     <i class='fa fa-italic'></i></span>  
-  &nbsp;
+  &nbsp; 
   <span onclick='addAround("<s>", "</s>")'> 
     <i class='fa fa-strikethrough'></i></span>
-  &nbsp;
+  &nbsp; 
   <span onclick='addAround("<sup>", "</sup>")'>  
     <i class='fa fa-superscript'></i></span>
-  &nbsp;  
+  &nbsp; 
   <span onclick='addAround("<sub>", "</sub>")'>  
     <i class='fa fa-subscript'></i></span>
   &nbsp;  
- <span onclick='addAround("[", "]()")'>  
-    <i class='fa fa-link'></i></span>
+  <span onclick='addAround("[", "]()")'>  
+    <i class='fa fa-link'></i></span> 
+  &nbsp; 
+  <span onclick='addAround("", "![](img)")'>  
+    <i class='fa fa-image'></i></span>
+  &nbsp;  
+  <span onclick='addTable()'>  
+    <i class='fa fa-table'></i></span>
+  
 {#
   &nbsp;  
     <i class='fa fa-quote-left'></i>

@@ -19,8 +19,15 @@ function addAround(b, a) {
     /* add text before and after the selected text */ 
     ($("#source")
         .selection('insert', {text: b, mode: 'before'})
-        .selection('insert', {text: a, mode: 'after'}));
-    
+        .selection('insert', {text: a, mode: 'after'}));  
+}    
+
+function addTable() {
+    var t = ("\nHead 1 | Head 2 | Head 3\n"    
+        +      "------ | ------ | ------\n"  
+        +      "cell 1 | cell 2 | cell 3\n"  
+        +      "cell 4 | cell 5 | cell 6\n");
+    addAround(t, "");
 }    
 
 
