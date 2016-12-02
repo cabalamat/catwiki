@@ -479,13 +479,23 @@ div.toc > ul > li > ul {
 }
 
 /*------------------------------------------------------------------*/
-/* editting */
+/* editing */
 
 #edit_toolbar {
     font-size: 18px;
     //color: #060;
     //background: #efe;
-    margin: 9px 0px 3px 0px; 
+    margin: 9px 0px 3px 0px;
+}
+
+#edit_toolbar .fa {
+    cursor: pointer;
+    padding: 3px 4px;
+}
+
+#edit_toolbar span :hover {
+    color: #faf;
+    background: #606;
 }
 
 

@@ -28,35 +28,27 @@ Rename article</a></p>
 
 {% block wikiContents %}
 <div id='edit_toolbar'>
-  &nbsp;
   <span onclick='addAround("**", "**")'>
     <i class='fa fa-bold'></i></span>
-  &nbsp; 
   <span onclick='addAround("*", "*")'>
-    <i class='fa fa-italic'></i></span>  
-  &nbsp; 
-  <span onclick='addAround("<s>", "</s>")'> 
+    <i class='fa fa-italic'></i></span>
+  <span onclick='addAround("<s>", "</s>")'>
     <i class='fa fa-strikethrough'></i></span>
-  &nbsp; 
-  <span onclick='addAround("<sup>", "</sup>")'>  
+  <span onclick='addAround("<sup>", "</sup>")'>
     <i class='fa fa-superscript'></i></span>
-  &nbsp; 
-  <span onclick='addAround("<sub>", "</sub>")'>  
+  <span onclick='addAround("<sub>", "</sub>")'>
     <i class='fa fa-subscript'></i></span>
-  &nbsp;  
-  <span onclick='addAround("[", "]()")'>  
-    <i class='fa fa-link'></i></span> 
-  &nbsp; 
-  <span onclick='addAround("", "![](img)")'>  
+  <span onclick='addAround("[", "]()")'>
+    <i class='fa fa-link'></i></span>
+  <span onclick='addAround("", "![](img)")'>
     <i class='fa fa-image'></i></span>
-  &nbsp;  
-  <span onclick='addTable()'>  
+  <span onclick='addTable()'>
     <i class='fa fa-table'></i></span>
-  
+
 {#
-  &nbsp;  
+  &nbsp;
     <i class='fa fa-quote-left'></i>
-#}    
+#}
 </div>
 
 <form id="theForm" method="POST"
