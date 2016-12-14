@@ -16,20 +16,52 @@ function openHelp(helpPage){
 /* editting on wikiedit page */
 
 function addAround(b, a) {
-    /* add text before and after the selected text */ 
+    /* add text before and after the selected text */
     ($("#source")
         .selection('insert', {text: b, mode: 'before'})
-        .selection('insert', {text: a, mode: 'after'}));  
-}    
+        .selection('insert', {text: a, mode: 'after'}));
+}
 
 function addTable() {
-    var t = ("\nHead 1 | Head 2 | Head 3\n"    
-        +      "------ | ------ | ------\n"  
-        +      "cell 1 | cell 2 | cell 3\n"  
+    var t = ("\nHead 1 | Head 2 | Head 3\n"
+        +      "------ | ------ | ------\n"
+        +      "cell 1 | cell 2 | cell 3\n"
         +      "cell 4 | cell 5 | cell 6\n");
     addAround(t, "");
-}    
+}
 
+function blockquote() {
+    var sel = $('#source').selection(); // selected text
+    var lines = sel.split("\n");
+    //console.log("lines=" + toString(lines));
+    var bqLines = lines.map(line => {
+        return "> " + line;
+    });
+    //console.log("bqLines=" + toString(bqLines));
+    var bqSel = bqLines.join("\n");
+    $('#source').selection('replace', {text: bqSel});
+}
+
+function bulletList() {
+    var sel = $('#source').selection();
+    var lines = sel.split("\n");
+    var rLines = lines.map(line => {
+        return "* " + line;
+    });
+    var r = rLines.join("\n");
+    $('#source').selection('replace', {text: r});
+}
+
+function numberedList() {
+    var sel = $('#source').selection();
+    var lines = sel.split("\n");
+    var n = 1;
+    var rLines = lines.map(line => {
+        return (n++) + ". " + line;
+    });
+    var r = rLines.join("\n");
+    $('#source').selection('replace', {text: r});
+}
 
 
 //--------------------------------------------------------------------
