@@ -1,12 +1,12 @@
 # Markdown
 
-Markdown is the lightweight markup language that [[Sitebox]] uses.
+Markdown is the lightweight markup language that CatWiki uses.
 
 Markdown was chosen because:
 
 * the syntax is quite good
 * it is widely used
-* the Python Markdown package is extendible
+* the Python Markdown package is extensible
 * I'm familiar with it, having used it before.
 
 ## See also
