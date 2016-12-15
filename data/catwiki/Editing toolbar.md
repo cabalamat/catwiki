@@ -27,14 +27,14 @@ Tool | Selected text | Changes to | Looks like | Notes
 
 ## Tools for adding links to content, <i class='fa fa-link'></i> <i class='fa fa-image'></i>
 
-These tools allow you to specify a hyperlikn or image.
+These tools allow you to specify a hyperlink or image.
 
 Tool | Selected text | Changes to | Looks like | Notes
 -----| ------------- | ---------- | ---------- | -----
-<i class='fa fa-link'></i> | `abc` | `[abc]()` | [abc]() | hyperlink, url left blank
+<i class='fa fa-link'></i> | `abc` | `[abc]()` | [abc]() | link, url left blank
 <i class='fa fa-image'></i> | `abc` | `![abc](img)` | ![abc](img) | image, "img" is placeholder for image URL
 
-The hyperlink tool ( <i class='fa fa-link'></i> ) uses the linked text as the displayed text for a hyperlink. The user has to manually add the URL within the `()`.
+The hyperlink tool ( <i class='fa fa-link'></i> ) uses the linked text as the displayed text for a link. The user has to manually add the URL within the `()`.
 
 The image tool ( <i class='fa fa-image'></i> ) uses the linked text as the alt text for the image. The user has to replace the `img` within `(img)` with the actual
 URL for the image.

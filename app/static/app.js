@@ -63,6 +63,17 @@ function numberedList() {
     $('#source').selection('replace', {text: r});
 }
 
+function monospace() {
+    /* make text monspace. if it is all on one line, suround with `...`,
+    else suround with ```...``` */
+    var sel = $('#source').selection();
+    var lines = sel.split("\n");
+    if (lines.length <= 1){
+        addAround("`", "`");
+    } else {
+        addAround("\n```\n", "\n```\n");
+    }
+}
 
 //--------------------------------------------------------------------
 
