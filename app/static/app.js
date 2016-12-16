@@ -64,7 +64,7 @@ function numberedList() {
 }
 
 function monospace() {
-    /* make text monspace. if it is all on one line, suround with `...`,
+    /* Make text monospace. If it is all on one line, suround with `...`,
     else suround with ```...``` */
     var sel = $('#source').selection();
     var lines = sel.split("\n");

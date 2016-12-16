@@ -9,7 +9,11 @@ Above the text entry area is the editing toolbar. It looks like this:
 <i class='fa fa-subscript'></i>  
 <i class='fa fa-link'></i>  
 <i class='fa fa-image'></i>  
-<i class='fa fa-table'></i><span>
+<i class='fa fa-table'></i>
+<i class='fa fa-quote-left'></i>
+<i class='fa fa-list-ul'></i>
+<i class='fa fa-list-ol'></i>
+<tt class='mono_tool'>mo</tt><span>
 
 You use the editing toolbar by optionally selecting some text and then clicking on the relevant button. This puts Markdown markup around the selected text, to perform the relevant function.
 
@@ -55,6 +59,42 @@ Head 1 | Head 2 | Head 3
 ------ | ------ | ------
 cell 1 | cell 2 | cell 3
 cell 4 | cell 5 | cell 6
+
+## Multi-line tools, <i class='fa fa-quote-left'></i> <i class='fa fa-list-ul'></i> <i class='fa fa-list-ol'></i> <tt class='mono_tool'>mo</tt>
+
+These all act on a selection containing multiple lines.
+
+Tool | Line before | Line after | Notes
+-----| ----------- | ---------- | -----
+<i class='fa fa-quote-left'></i> | `abc` | `> abc` | blockquotes
+<i class='fa fa-list-ul'></i> | `abc` | `* abc` | bulleted list
+<i class='fa fa-list-ol'></i> | `abc` | `1. abc` | numbered list
+<tt class='mono_tool'>mo</tt> | `abc` | `\`abc\`` | monospaced text or code block
+
+Text in <i class='fa fa-quote-left'></i> blockquotes ( <i class='fa fa-quote-left'></i> ) looks like:
+
+> here is
+> some
+> text
+
+Text in a bulleted list ( <i class='fa fa-list-ul'></i> ) looks like:
+
+* here is
+* some
+* text
+
+Text in a numbered list ( <i class='fa fa-list-ol'></i> ) looks like:
+
+1. here is
+2. some
+3. text
+
+A multi-line code block ( <tt class='mono_tool'>mo</tt> ) looks like:
+```
+here is
+some
+text
+```
 
 ## See also
 
