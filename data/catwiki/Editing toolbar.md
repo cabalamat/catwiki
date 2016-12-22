@@ -71,7 +71,7 @@ Tool | Line before | Line after | Notes
 <i class='fa fa-list-ol'></i> | `abc` | `1. abc` | numbered list
 <tt class='mono_tool'>mo</tt> | `abc` | `\`abc\`` | monospaced text or code block
 
-Text in <i class='fa fa-quote-left'></i> blockquotes ( <i class='fa fa-quote-left'></i> ) looks like:
+Text in blockquotes ( <i class='fa fa-quote-left'></i> ) looks like:
 
 > here is
 > some
