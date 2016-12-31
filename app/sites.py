@@ -8,7 +8,7 @@ import markdown
 
 from ulib import butil
 from ulib.butil import form
-from ulib.debugdec import prvars
+from ulib.debugdec import prvars, pr
 
 import config
 import allpages
@@ -46,7 +46,9 @@ def siteListH():
     for stub in config.SITE_STUBS:
         _, dirs = butil.getFilesDirs(stub)
         for siteName in dirs:
-            h += (("<span class='loc-sitename'><a href='/{siteName}/info'><i class='fa fa-bank'></i> {siteName}</a></span> -- under <code>{stub}</code><br>\n")
+            h += (("<span class='loc-sitename'><a href='/{siteName}/info'>"
+                "<i class='fa fa-bank'></i> {siteName}</a></span> -- "
+                "under <code>{stub}</code><br>\n")
                 .format(siteName=siteName,
                         stub=stub))     
         #//for siteName
@@ -63,6 +65,13 @@ def siteInfo(siteName):
     tem = jinjaEnv.get_template("generic_10_2.html")
     
     dirPan = wiki.getDirPan(siteName, "")
+    realPan = os.path.realpath(dirPan)
+    realPanInfo = ""
+    if realPan != dirPan:
+        realPanInfo = form("<p>Canonical path is <code>{realPan}"
+            "</code> .</p>\n",
+            realPan = realPan)
+    #prvars("dirPan realPan realPanInfo")
     fns, dirs = butil.getFilesDirs(dirPan)
     if butil.fileExists(butil.join(dirPan, "home.md")):
          homePageInfo = form("View <a href='/{siteName}/w/home'>"
@@ -79,6 +88,7 @@ def siteInfo(siteName):
 <h1>Information about site <i class='fa fa-bank'></i> {siteName}</h1>
 
 <p><b>{siteName}</b> is stored in directory <code>{siteRoot}</code> .</p>
+{realPanInfo}
 
 <p>There are {numPages} pages in the root folder, and {numSubDirs} sub-folders.
 <a href='/{siteName}/w/'><i class='fa fa-folder'></i>
@@ -89,6 +99,7 @@ View root folder</a>.
 """.format(
         siteName = siteName,
         siteRoot = dirPan,
+        realPanInfo = realPanInfo,
         numPages = len(fns),
         numSubDirs = len(dirs),
         homePageInfo = homePageInfo,
