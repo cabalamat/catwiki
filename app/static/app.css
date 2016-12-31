@@ -479,7 +479,7 @@ div.toc > ul > li > ul {
 }
 
 /*------------------------------------------------------------------*/
-/* editing */
+/* editing and toolbar */
 
 #edit_toolbar {
     font-size: 18px;
@@ -498,6 +498,10 @@ div.toc > ul > li > ul {
     background: #606;
 }
 
+tt.mono_tool {
+    font-size: 115%;
+    padding: 2px 2px 0px;
+}
 
 /*------------------------------------------------------------------*/
 /* debugging */
