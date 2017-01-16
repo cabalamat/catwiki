@@ -77,6 +77,9 @@ MIME_TYPES = [
    ('png', 'image/png'),
    ('jpg', 'image/jpeg'),
    ('jpeg', 'image/jpeg'),
+   ('xls', 'application/vnd.ms-excel'),
+   ('xlsx', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'),
+   ('xlst', 'application/vnd.openxmlformats-officedocument.spreadsheetml.template'),
 ]
 
 def getMimeType(pathName):
@@ -316,23 +319,23 @@ def getIndex(siteName, pathName):
     if arts:
         for fn in arts:
             text = getTitle(butil.join(dirPan, fn+".md"))
-            if text==fn: 
+            if text==fn:
                 text = ""
             else:
                 text = " - " + text
-                
-            if fn=="home": 
+
+            if fn=="home":
                 item = form("<a href='{fn}'>"
                     "<span class='home-icon'><i class='fa fa-home'></i></span>"
                     " {fn}</a>{text}",
                     fn = fn,
                     text = text)
-            else:    
+            else:
                 item = form("<a href='{fn}'>"
                     "<i class='fa fa-file-text-o'></i> {fn}</a>{text}",
                     fn = fn,
                     text = text)
-                
+
             items.append(item)
         #//for
         h += bsColumns(items, 3)
