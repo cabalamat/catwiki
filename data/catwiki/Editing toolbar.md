@@ -2,17 +2,17 @@
 
 Above the text entry area is the editing toolbar. It looks like this:
 
-> <span style='font-size:18px'><i class='fa fa-bold'></i>  
-<i class='fa fa-italic'></i>  
-<i class='fa fa-strikethrough'></i>  
-<i class='fa fa-superscript'></i>  
-<i class='fa fa-subscript'></i>  
-<i class='fa fa-link'></i>  
-<i class='fa fa-image'></i>  
-<i class='fa fa-table'></i>
-<i class='fa fa-quote-left'></i>
-<i class='fa fa-list-ul'></i>
-<i class='fa fa-list-ol'></i>
+> <span style='font-size:18px'><i class='fa fa-bold'></i>&nbsp;
+<i class='fa fa-italic'></i>&nbsp;
+<i class='fa fa-strikethrough'></i>&nbsp;
+<i class='fa fa-superscript'></i>&nbsp;
+<i class='fa fa-subscript'></i>&nbsp;
+<i class='fa fa-link'></i>&nbsp;
+<i class='fa fa-image'></i>&nbsp;
+<i class='fa fa-table'></i>&nbsp;
+<i class='fa fa-quote-left'></i>&nbsp;
+<i class='fa fa-list-ul'></i>&nbsp;
+<i class='fa fa-list-ol'></i>&nbsp;
 <tt class='mono_tool'>mo</tt><span>
 
 You use the editing toolbar by optionally selecting some text and then clicking on the relevant button. This puts Markdown markup around the selected text, to perform the relevant function.
