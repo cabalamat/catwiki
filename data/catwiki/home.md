@@ -14,8 +14,16 @@ CatWiki is a very simple wiki that stores its articles as text files. It was ori
 
 CatWiki is written in Python and uses the Flask lightweight web framework.
 
+## Layout
+
+* general information about CatWiki, including [help](help) pages, is in the [root directory](./). 
+* The sandbox is in the [sandbox directory](sandbox/). 
+* Notes on development of Catwiki are in [development/](development/) .
+* Notes on the overall [MeowCat project](meowcat/home) are in [meowcat/](meowcat/).
+
 ## See also
 
 * [Help pages](help)
+* [Frequently Asked Questions](faq)
 * CatWiki is part of the [[MeowCat]] project.
 * [[Short-term to-do list]]
