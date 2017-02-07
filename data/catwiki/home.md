@@ -1,6 +1,6 @@
 # <i class='icon-icon_e600'></i> CatWiki Home Page
 
-CatWiki is a very simple wiki that stores its articles as text files. It was originally called *SiteBox*.
+CatWiki is very simple wiki software that stores its articles as text files. It was originally called *SiteBox*.
 
 ## Features
 
@@ -14,7 +14,7 @@ CatWiki is a very simple wiki that stores its articles as text files. It was ori
 
 CatWiki is written in Python and uses the Flask lightweight web framework.
 
-## Layout
+## Layout of the CatWiki Wiki
 
 * general information about CatWiki, including [help](help) pages, is in the [root directory](./). 
 * The sandbox is in the [sandbox directory](sandbox/). 
@@ -27,3 +27,4 @@ CatWiki is written in Python and uses the Flask lightweight web framework.
 * [Frequently Asked Questions](faq)
 * CatWiki is part of the [[MeowCat]] project.
 * [[Short-term to-do list]]
+* [[Credits]]

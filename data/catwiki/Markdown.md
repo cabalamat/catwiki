@@ -11,6 +11,7 @@ Markdown was chosen because:
 
 ## See also
 
+* [[CatWiki enhancements to Markdown]]
 * [Markdown syntax](Markdown/syntax)
 * [Wikipedia page on Markdown](https://en.wikipedia.org/wiki/Markdown)
 * [Python-Markdown on Pythonhosted](https://pythonhosted.org/Markdown/index.html) (also: [PyPI](https://pypi.python.org/pypi/Markdown), [GitHub](https://github.com/waylan/Python-Markdown))

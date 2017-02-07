@@ -14,4 +14,4 @@ CatWiki's pages are stored as text files so you can read them without using the 
 
 ## What Markup language does CatWiki use?
 
-CatWiki-flavoured [[Markdown]].
+CatWiki-[flavoured](CatWiki enhancements to Markdown) [[Markdown]].
