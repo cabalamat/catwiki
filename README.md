@@ -1,12 +1,14 @@
 # About CatWiki
 
-CatWiki is a very simple wiki that stores its articles as text files. It was originally called *SiteBox*.
+CatWiki is very simple wiki software that stores its articles as text files.
 
 ## Features
 
+* Stores articles as text files, so they are easy to back up and manipulate. Even if the wiki software goes down, you can still get at your notes.
 * Uses an enhanced version of the the Markdown markup language.
 * Allows multiple wikis per installation, each one in its own directory
 * Allows subdirectories
+* You can add Font Awesome icons in your wiki pages.
 
 ## Technology Used
 
