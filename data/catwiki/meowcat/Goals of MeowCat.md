@@ -4,11 +4,11 @@
 
 ## Three original concepts
 
-The ideas around [SiteBox](Sitebox) stemmed from what were originally three separate ideas for projects in my mind:
+The ideas around [MeowCat](home) stemmed from what were originally three separate ideas for projects in my mind:
 
-* **Concept 1 -- MeowCat**: Anti-censorship software that would enable secure private communication and anonymous public communication (this concept I called **MeowCat**)
+* **Concept 1 -- ???**: Anti-censorship software that would enable secure private communication and anonymous public communication (this concept I called **MeowCat**)
 
-* **Concept 2 -- SiteBox**: A "website in a box" site (hence the name **SiteBox**) containing a blog, a wiki, and other tools that a group of people who want to communicate/collaborate on the internet might want. Think of it as [Wordpress](https://wordpress.com/) but with a built-in wiki.
+* **Concept 2 -- ????**: A "website in a box" site (hence the name **SiteBox**) containing a blog, a wiki, and other tools that a group of people who want to communicate/collaborate on the internet might want. Think of it as [Wordpress](https://wordpress.com/) but with a built-in wiki.
 
 * **Concept 3** (no name): A platform for writing books and technical documentation, ideally collaboratively. Think of a web-based front-end to [Pandoc](http://johnmacfarlane.net/pandoc/) coupled with an intuitive user interface to [Git](http://git-scm.com/) and [Github](https://github.com/)-like functionality. [GitBook](https://www.gitbook.io/) is a project along these lines. *"Github for writers"* might be a good slogan for this part of the project.
 
@@ -16,7 +16,7 @@ The ideas around [SiteBox](Sitebox) stemmed from what were originally three sepa
 
 ## Putting them together
 
-The more I thought about these ideas, the more I realised there was considerable overlap between them. 
+The more I thought about these ideas, the more I realised there was considerable overlap between them.
 
 Concepts 1 and 2 both need a system where people can post messages, reply to others and have threaded conversations. Concepts 3 would also benefit from this as an aid to collaboration.
 
@@ -26,9 +26,9 @@ Put together Concept 1 and Concept 3, and you have people collaboratively writin
 
 ## Goals in detail
 
-The three concepts I've listed above are somewhat vague in detail. To flesh them out, I've detailed various [use-cases](SiteBox Use-Cases).
+The three concepts I've listed above are somewhat vague in detail. To flesh them out, I've detailed various [use-cases](MeowCat Use-Cases).
 
-## Implementation 
+## Implementation
 
 This is a big project that can't be done all at once. So it will be done in stages.
 
