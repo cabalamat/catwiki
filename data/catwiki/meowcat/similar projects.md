@@ -1,6 +1,6 @@
 # Similar Projects
 
-Similar projects to SiteBox include:
+Similar projects to MeowCat include:
 
 ## Encryption
 
