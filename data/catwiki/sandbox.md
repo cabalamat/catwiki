@@ -1,4 +1,4 @@
-# SiteBox's sandbox
+# CatWiki's sandbox
 
 The **sandbox** is a safe area to try things out. It's stored in [the `/sandbox/` directory](sandbox/).
 
