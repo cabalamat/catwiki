@@ -6,7 +6,7 @@ Instructions to install CatWiki.
 
 You must have Python 2.7 and Git installed on your system.
 
-## Download 
+## Download
 
 Download the software using `git`:
 
@@ -41,4 +41,5 @@ Now you can either run the software using the Tornado web server, for production
 
 ## Use the software
 
-Now point your web browser to <http://127.0.0.1:7331/>. This will display all the wikis in your installation.
+Now point your web browser to <http://127.0.0.1:7331/>. This will display [all the wikis](multiple wikis)
+in your installation.
