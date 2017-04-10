@@ -214,7 +214,7 @@ def convertQuickLinks(s):
     @param s [str] containing markdown source
     @return [str]
     """
-    QUICKLINK_RE = r"\[\[([A-Za-z0-9_ -]+)\]\]"
+    QUICKLINK_RE = r"\[\[([A-Za-z0-9_ -.]+)\]\]"
     REPLACE_WITH = r"[\1](\1)"
     r = re.sub(QUICKLINK_RE, REPLACE_WITH, s)
     return r

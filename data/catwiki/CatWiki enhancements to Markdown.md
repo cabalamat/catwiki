@@ -7,7 +7,7 @@
 * [toc](https://pythonhosted.org/Markdown/extensions/toc.html) -- allows for a table of contents
 * [codehilite](https://pythonhosted.org/Markdown/extensions/code_hilite.html) -- highlights code using [Pygments](http://pygments.org/)
 
-In addition, CatWiki also allows MediaWiki-style links, i.e. starting with `[[` and ending with `]]`.
+In addition, CatWiki also allows MediaWiki-style links, i.e. starting with `[[` and ending with `]]`; within these links, allowed characters are letters (`A-Za-z`), digits (`0-9`), spaces, underlines (`_`), hyphens (`-`) and periods (`.`). 
 
 ## See also
 
