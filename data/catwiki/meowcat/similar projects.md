@@ -27,6 +27,10 @@ Similar projects to MeowCat include:
 * [Simple Site](http://www.simplesite.com/) allows you to create a website that they will then host.
 * [Wix](http://www.wix.com/) allows you to create a website that they will then host.
 
+## Communities
+
+* [IndieWeb](https://indieweb.org/) is "a people-focused alternative to the 'corporate web'" and a community to build projects that achieve this.
+
 ## See also
 
 * [[Similar ideas to MeowCat]]

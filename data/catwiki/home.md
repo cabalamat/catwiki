@@ -26,6 +26,6 @@ CatWiki is written in Python and uses the Flask lightweight web framework.
 * [[Installing CatWiki]]
 * [Help pages](help)
 * [Frequently Asked Questions](faq)
-* CatWiki is part of the [[MeowCat]] project.
+* CatWiki is part of the [MeowCat](meowcat/home) project.
 * [[Short-term to-do list]]
 * [[Credits]]
