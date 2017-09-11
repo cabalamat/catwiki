@@ -398,6 +398,10 @@ code {
   border-radius: 4px;
 }
 
+.wiki-contents table code {
+  padding: 0px;
+  border: 0px;
+}
 
 .codehilite pre {
   /* having a non-white background doesn't look so good with codehilite */
