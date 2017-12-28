@@ -5,8 +5,25 @@ History of a page in a wiki
 #}
 {% extends "wiki_page.html" %}
 
+{% block wikiCommands %}
+<p class="command-header">Commands</p>
+
+<p><a class='btn btn-info'
+href="/{{siteName}}/w/{{pathName}}">
+<i class='fa fa-eye'></i> View page</a></p>
+
+<p><a class='btn btn-success'
+href="/{{siteName}}/wikiedit/{{pathName}}">
+<i class='fa fa-edit'></i> Edit page</a></p>
+
+<p><a class='btn btn-default'
+href="/{{siteName}}/history/{{pathName}}">
+<i class='fa fa-history'></i> History</a></p>
+{% endblock wikiCommands %}
+
 {% block wikiContents %}
-<h1><i class='fa fa-history'></i> History of {{pathName}}</h1>
-<p>Stuff goes here</p>
+<h2><i class='fa fa-history'></i> History of {{pathName}}</h2>
+
+{{table}}
 {% endblock wikiContents %}
 {# end #}

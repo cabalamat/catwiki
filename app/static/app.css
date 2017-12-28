@@ -58,7 +58,7 @@
 
 tt, pre, code {
   font-family: 'Ubuntu Mono', monospace;
-  font-size: 100%;
+  font-size: 105%;
 }
 
 body,p,h1,h2,h3,h4,h5,h6,a {
@@ -250,8 +250,6 @@ input.gin, textarea.gin {
   //padding-bottom: 3px;
   border-bottom: 2px solid #ccc;
 }
-
-
 
 .wiki-commands {
   //background: #fff4f4;
