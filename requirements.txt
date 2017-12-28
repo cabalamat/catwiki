@@ -5,6 +5,8 @@ cffi==1.4.2
 cryptography==1.2.1
 enum34==1.1.2
 Flask==0.10.1
+gitdb2==2.0.3
+GitPython==2.1.8
 idna==2.0
 ipaddress==1.0.16
 itsdangerous==0.24
@@ -18,5 +20,6 @@ Pygments==2.1
 pyOpenSSL==0.15.1
 singledispatch==3.4.0.3
 six==1.10.0
+smmap2==2.0.3
 tornado==4.3
 Werkzeug==0.11.3
