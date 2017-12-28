@@ -12,6 +12,7 @@ import config
 # pages:
 import wiki
 import sites
+import history
 
 #---------------------------------------------------------------------
 
