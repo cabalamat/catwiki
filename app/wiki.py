@@ -341,10 +341,16 @@ def getIndex(siteName, pathName):
         h += bsColumns(items, 3)
     if nonArticles:
         for fn in nonArticles:
-            nonArticleItems.append(form("<a href='{fn}'>"
+            hf = form("<a href='{fn}'>"
                 "<i class='fa fa-file-o'></i> "
                 "{fn}</a>",
-                fn = fn))
+                fn = fn)
+            if hasImageExtension(fn):
+                hf += form("<br>\n<a href='{fn}'>"
+                    "<img class='index_image' src='{fn}'>"
+                    "</a>",
+                    fn = fn)   
+            nonArticleItems.append(hf)
         #//for
         h += "<h3>Other files</h3>\n" + bsColumns(nonArticleItems, 3)
     if dirs:
@@ -413,6 +419,20 @@ def bsColumns(hs, numColumns, linSize='md'):
     h += "</div></div>\n"
     return h
 
+def hasImageExtension(fn):
+    """ Does a filename have an extension indicating it's an image?
+    @param fn::str = the filename
+    @return::bool
+    """
+    root, ext = os.path.splitext(fn)
+    if ext[:1] != ".": return False # no extension, not an image
+
+    IMAGE_EXTENSIONS = ['jpg', 'jpeg', 'png', 'gif']
+    ext2 = ext[1:].lower()
+    if ext2 in IMAGE_EXTENSIONS:
+        return True
+    return False
+                        
 
 
 #---------------------------------------------------------------------

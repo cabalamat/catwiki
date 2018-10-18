@@ -301,6 +301,14 @@ input.gin, textarea.gin {
 .home-icon {
 }
 
+img.index_image {
+  padding: 0px;
+  border: 1px solid #666;
+  margin-bottom: 10px;
+  max-width: 120px;
+  max-height: 120px;  
+}    
+
 /*------------------------------------------------------------------*/
 /* inside a wiki page (.wiki-contents ) */
 
