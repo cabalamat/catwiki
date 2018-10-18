@@ -7,5 +7,10 @@
 #### ignore backup files made by text editor
 *~
 
+#### ignore virtual environment
+venv/*
+
+#### ignore misc files
+nohup.out
 
 #end
