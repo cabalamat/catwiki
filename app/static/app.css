@@ -389,7 +389,8 @@ pre {
   margin-left: 25px;
   margin-right: 25px;
   //border: 2px solid #aaa;
-  border: 2px solid #b4d7ff;
+  //border: 2px solid #b4d7ff;
+  border: 2px solid #ebc;
   white-space: pre-wrap;
   word-break: keep-all;
   background: #fff;
@@ -397,10 +398,11 @@ pre {
 }
 
 code {
-  color: #006;
+  font-weight: bold;
+  color: #602;
   background: #fff;
   padding: 0 1px 0 1px;
-  border: 1px solid #b4d7ff;
+  //border: 1px solid #b4d7ff;
   border-radius: 4px;
 }
 
@@ -453,6 +455,7 @@ a[href*="//"]:after {
   font-family: 'FontAwesome';
   content: " \f08e";
 }
+
 /*
 a[href*="//"]:before {
   font-family: 'FontAwesome';
