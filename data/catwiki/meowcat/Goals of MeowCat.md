@@ -1,4 +1,4 @@
-# Goals of SiteBox
+# Goals of MeowCat
 
 [TOC]
 

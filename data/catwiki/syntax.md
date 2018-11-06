@@ -1,6 +1,8 @@
 # Markdown syntax
 
-*This page describes the version of markdown syntax used by Sitebox. See also [[extensions]].*
+*This page describes the version of markdown syntax used by Sitebox. See also [[CatWiki enhancements to Markdown]].*
+
+This page shows the results of some Markdown markp. Press [Edit page] to show what markup caused the results.
 
 Below is a table of contents. It can be produced using the markup `[TOC]`.
 
