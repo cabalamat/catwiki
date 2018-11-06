@@ -62,7 +62,7 @@ def fileExists(fn):
     # (if it doesn't exist, it can't be readable, so don't bother
     # testing that separately)
 
-    if not readable: return 0
+    if not readable: return False
 
     # now test if it's a file
     mode = os.stat(fn)[stat.ST_MODE]

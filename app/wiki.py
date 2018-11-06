@@ -9,7 +9,7 @@ from markdown.extensions.toc import TocExtension
 
 from ulib import butil
 from ulib.butil import form
-from ulib.debugdec import prvars, pr
+from ulib.debugdec import prvars, pr, printargs
 
 import config
 import allpages
@@ -219,20 +219,6 @@ def convertQuickLinks(s):
     r = re.sub(QUICKLINK_RE, REPLACE_WITH, s)
     return r
 
-def getArticlePan(siteName, pathName):
-    """ return the pathname for an article
-    @param siteName::str = the site name
-    @param pathName::str = the pathname withing the site
-    @return::str = the full pathname to the article (which may or may
-        not exist). If the site doesn't exist, returns "".
-    """
-    if not siteName: return ""
-    for stub in config.SITE_STUBS:
-        _, dirs = butil.getFilesDirs(stub)
-        if siteName in dirs:
-            return butil.join(stub, siteName, pathName + ".md")
-    #//for
-    return ""
 
 def getDirPan(siteName, pathName):
     """ return the pathname for a directory
@@ -281,7 +267,85 @@ def getArticleBody(siteName, pathName):
             pathName = htmlEscape(pathName))
         return (pathName, h)
 
+def getArticlePan(siteName, pathName):
+    """ return the pathname for an article
+    @param siteName::str = the site name
+    @param pathName::str = the pathname within the site
+    @return::str = the full pathname to the article (which may or may
+        not exist). If the site doesn't exist, returns "".
+    """
+    #prvars("siteName pathName")
+    if not siteName: return ""
+    for stub in config.SITE_STUBS:
+        _, dirs = butil.getFilesDirs(stub)
+        if siteName in dirs:
+            return getArticlePan2(stub, siteName, pathName)
+            #return butil.join(stub, siteName, pathName + ".md")
+    #//for
+    return ""
 
+def getArticlePan2(stub, siteName, pathName):
+    """ return the pathname for an article, given the stub of the directory
+    hierarchy to get it from.
+    @param stub::str = the leftmost part of the pathname, to just before
+        the siteName, e.g.:
+        "/home/someuser/siteboxdata/sites"
+    @param siteName::str = the site name
+    @param pathName::str = the pathname within the site
+    @return::str = the full pathname to the article (which may or may
+        not exist). If the site doesn't exist, returns "".
+    """
+    pathNameParts = pathName.split("/")
+    #prvars("pathNameParts")
+    pnLastPart = pathNameParts[-1]
+    normLP = normArticleName(pnLastPart)
+    pathName2 = "/".join(pathNameParts[:-1] + [normLP])
+    #prvars("normLP pathName2")
+    
+    useDir = butil.join(stub, siteName, "/".join(pathNameParts[:-1]))
+    if articleExists(useDir, normLP):
+        return butil.join(useDir, normLP + ".md")
+    
+    # article doesn't exist under the normalised name, look elsewhere:
+    articleNames = getArticleFilesWithoutExt(useDir)
+    for an in articleNames:
+        nan = normArticleName(an)
+        #prvars("an nan")
+        if nan==normLP:
+            return butil.join(useDir, an + ".md")
+    #//for    
+    
+    # couldn't find it elsewhere, use the normalised name
+    return butil.join(useDir, normLP + ".md")
+    
+    pn = butil.join(stub, siteName, pathName2 + ".md")
+    prvars("pn")
+    return pn
+     
+def articleExists(d, an):
+    """
+    @param d::str = a full path to a directory
+    @param an::str = a filename within that directory, but without the 
+        ".md" extension 
+    @return::bool = whether the article (an) exists    
+    """
+    pan = butil.join(d, an + ".md")
+    return butil.fileExists(pan)
+
+ 
+def getArticleFilesWithoutExt(d):
+    """
+    @param d::str = a full path to a directory
+    @return::[str] where each string is an article in the directory without
+        the ".md" extension
+    """
+    fns, _ = butil.getFilesDirs(d)
+    arts = sorted([fn[:-3]
+                   for fn in fns
+                   if fn[-3:]==".md" and not fn[:1]=="~"])
+    return arts
+
+    
 def getIndex(siteName, pathName):
     """ get an index of a directory.
     @param siteName::str
@@ -433,6 +497,36 @@ def hasImageExtension(fn):
         return True
     return False
                         
+
+
+#---------------------------------------------------------------------
+# functions for nirmalising wiki page names
+
+def normArticleName(an):
+    """ Normalise an article name e.g. "Hello" -> "hello"
+    Characters [a-z0-9-] are passed through as is
+    Characters [A-Z] are converted to lower case
+    Any group of 1 or more other characters is replaced by a single "_"
+    After this, beginning/ending "_" are removed.
+    
+    @param an::str = article name gtrom http request
+    @return::str = normalised filename to look for
+    """
+    PASS_THROUGH = "abcdefghijklmnopqrstuvwxyz0123456789-"
+    TO_LOWER = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    r = ""
+    for ch in an:
+        if ch in PASS_THROUGH:
+            r += ch
+        elif ch in TO_LOWER:
+            r += ch.lower()
+        else:
+            if r[-1:] != "_":
+                r += "_"
+    #//for
+    r2 = r.strip("_")
+    return r2
+
 
 
 #---------------------------------------------------------------------
