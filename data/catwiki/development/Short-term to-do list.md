@@ -2,12 +2,8 @@
 
 This is CatWiki's **Short-term to-do list**.
 
-When there is monspced text within headers, make it render at the same font sidze as the header text (Fix CSS).
+[TOC]
 
-Example. This markdown:
+## Allow articles to be re-named
 
-    ## This is a header for some `code` here
-
-Produces this result:
-
-## This is a header for some `code` here
+When an article is re-named it should behave like it does in Wikipedia; that is, links to the old name should still work. 
