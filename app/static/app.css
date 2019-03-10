@@ -326,7 +326,6 @@ img.index_image {
   font-weight: bold;
 }
 .toc li:before { content: ""; }
-.toc ul
 
 
 .wiki-contents, .wiki-index {
@@ -466,7 +465,8 @@ a[href*="//"]:before {
 
 .wiki-contents img {
   padding: 2px;
-  border: 1px dashed #666;
+  //border: 1px dashed #666;
+  box-shadow: 0px 0px 9px 2px #888;
   max-width: 90%;
 }
 
