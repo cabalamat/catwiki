@@ -39,9 +39,9 @@ Rename article</a></p>
   <span onclick='addAround("<sub>", "</sub>")'>
     <i class='fa fa-subscript'></i></span>
   <span onclick='addAround("[", "]()")'>
-    <i class='fa fa-link'></i></span>
-  <span onclick='addAround("![", "](img)")'>
-    <i class='fa fa-image'></i></span>
+    <i class='fa fa-link'></i></span>   
+  <span onclick='addAround("![", "](filename.png)")'>
+    <i class='fa fa-image'></i></span>    
   <span onclick='addTable()'>
     <i class='fa fa-table'></i></span>
   <span onclick='blockquote()'>
@@ -52,6 +52,8 @@ Rename article</a></p>
     <i class='fa fa-list-ol'></i></span>
   <span onclick='monospace()'>
     <tt class='mono_tool'>mo</tt></span>
+  <span onclick='addAround("<mark>", "</mark>")'>
+    <mark>&nbsp;mark&nbsp;</mark></span>
 </div>
 
 <form id="theForm" method="POST"
