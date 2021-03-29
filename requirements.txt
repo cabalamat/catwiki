@@ -18,7 +18,7 @@ MarkupSafe==0.23
 ndg-httpsclient==0.4.0
 pyasn1==0.1.9
 pycparser==2.14
-Pygments==2.1
+Pygments==2.7.4
 pyOpenSSL==18.0.0
 singledispatch==3.4.0.3
 six==1.10.0
